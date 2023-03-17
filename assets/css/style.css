@@ -1,0 +1,14 @@
+/* Main page information*/
+
+body {
+    background: rgb(0, 255, 132);
+    font-family: "Oswald", sans-serif;
+}
+
+.main-box {
+    background: white;
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    position: fixed;
+}
