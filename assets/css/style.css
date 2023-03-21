@@ -78,12 +78,15 @@ body {
 /* Game grid settings */
 
 .game-grid {
+    margin-top: 200px;
+    justify-content: center;
+    align-items: center;
     display: grid;
     grid-template-columns: repeat(3, auto);
 }
 
 .square {
-    width: 75px;
-    height: 75px;
+    width: 120px;
+    height: 120px;
     border: 1px solid black;
 }
