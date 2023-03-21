@@ -8,7 +8,7 @@ body {
     background: rgb(0, 255, 132);
 }
 
-
+/* Title box above game */
 .main-box {
     background: white;
     width: 100%;
@@ -73,4 +73,17 @@ body {
     color: white;
     border-radius: 10px;
     border: 2px solid black;
+}
+
+/* Game grid settings */
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.square {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
 }
