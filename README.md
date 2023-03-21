@@ -1,4 +1,4 @@
 
 
 Tips and help:
-W3.org - centering of start box
+W3.org - centering of start box / color coding

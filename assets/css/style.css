@@ -1,9 +1,13 @@
 /* Main page information*/
 
-body {
-    background: rgb(0, 255, 132);
+*{
     font-family: "Oswald", sans-serif;
 }
+
+body {
+    background: rgb(0, 255, 132);
+}
+
 
 .main-box {
     background: white;
@@ -32,14 +36,32 @@ body {
     text-align: center;
 }
 
+.options button {
+    font-size: 20px;
+    font-weight: 600;
+    width: 40%;
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
 .player1 {
-    margin-right: 20px;
-    background-color: blue;
+    margin-right: 10px;
+    background-color: rgb(0,0,255, 0.8);
     color: white;
 }
 
 .player2 {
-    margin-left: 20px;
-    background-color: red;
+    margin-left: 10px;
+    background-color: rgb(255, 0, 0, 0.8);
     color: white;
 }
+
+.options button:hover {
+    border-radius: 10px;
+    border: 2px solid black;
+  }
