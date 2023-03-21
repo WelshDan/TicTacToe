@@ -1,10 +1,10 @@
 const square = document.querySelectorAll('[square]')
 const gameGrid = document.getElementById(".game-grid")
 const statusDisplay = document.querySelector(".status")
-const newGame = document.querySelector(".new-game")
+const newGame = document.querySelector(".playAgain")
 
-const player1 = <i class="fa-solid fa-x" style="color: blue;">
-const player2 = <i class="fa-solid fa-o" style="color: red;">
+const player1 = <i class="fa-solid fa-x" style="color: blue;" />
+const player2 = <i class="fa-solid fa-o" style="color: red;" />
 let isPlayer2 = false;
 
 const won =[
@@ -20,10 +20,14 @@ const won =[
 
 newGame()
 playAgain.addEventListener('click', newGame)
-function newGame {
-    isPlayer2 = false;
+function newGame() {
+    isPlayer2 = false
         square.classList.remove();
-
+}
+const square0 = document.getElementById("0");
+square0.addEventListener('click', clickSquare);
+function clickSquare() {
+    console.log("Hello");
 }
 
 function playerControl() {
