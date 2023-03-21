@@ -104,13 +104,13 @@ body {
     font-weight: 400;
 }
 
-.new-game {
+.playAgain {
     text-align: center;
     justify-content: center;
     bottom: 15px;
 }
 
-.new-game button {
+.playAgain button {
     font-size: 15px;
     font-weight: 200;
     max-width: 100px;
@@ -120,7 +120,7 @@ body {
     border-radius: 10px;
 }
 
-.new-game button:hover {
+.playAgain button:hover {
     font-size: 15px;
     background-color: orange;
     color: white;
