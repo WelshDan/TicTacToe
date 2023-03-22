@@ -4,7 +4,7 @@ const restartGame = document.getElementById("restart");
 const imgx = document.getElementById('img-x');
 const imgo = document.getElementById('img-o');
 const tiles = document.getElementsByClassName('square');
-const winCombos =[
+const winConditions =[
     [0,1,2],
     [3,4,5],
     [6,7,8],
@@ -16,7 +16,7 @@ const winCombos =[
 ];
 
 let options = ["", "", "", "", "", "", "", "", ""];
-let playerIcon = '1';
+let playerIcon = 'X';
 
 startGame();
 
@@ -41,12 +41,35 @@ function updateSquare (elementId) {
 }
 
 function changePlayerIcon () {
-    playerIcon = playerIcon === '2' ? '1' : '2';
+    playerIcon = playerIcon === 'O' ? 'X' : 'O';
     statusDisplay.textContent = `Player ${playerIcon}'s turn`
 }
+/*
+function checkWinner () {
+    let roundWon = false;
 
-function checkWinner (tiles) {
-    if (winCheck = true ? statusDisplay.textContent = `Player ${playerIcon} Won!` : 
+    for (let i = 0; i < winConditions; i++) {
+        let condition = winConditions[i];
+        let cellA = options[condition[0]];
+        let cellB = options[condition[1]];
+        let cellC = options[condition[2]];
+
+        if (cellA == "" || cellB == "" || cellC == "") {
+            continue;
+        } if (cellA == cellB && cellB == cellC) {
+            roundWon = true;
+            break;
+        }
+    }
+
+    if (roundWon) {
+        statusDisplay.textContent = `${playerIcon} WINS!`
+        running = false;
+    } else if (!options.includes("")) {
+        statusDisplay.textContent = `It's a DRAW!`
+    } else {
+        changePlayerIcon();
+    }
 }
 /*
 function restartGame () {
