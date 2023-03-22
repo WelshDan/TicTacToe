@@ -13,28 +13,11 @@ const winCheck =[
 ];
 
 let options = ["", "", "", "", "", "", "", "", "",]
+let player1 = "x";
+let player2 = "o";
+let running = false;
 
-
-/*
-let isPlayer2 = false;
-let newGame = true;
-const string = newGame ? "" : (isPlayer2 ? "O" : "X");
- function add() {
-    isPlayer2 = true;
-    document.getElementById("00").innerHTML = string;
-    newGame = false;
-    alert(string);
-  }
-/*
-
-
-  let square = document.getElementById('0');
-  square.addEventListener('click', add);
-
-
-
-
-
+startGame();
 
 function startGame () {
 
