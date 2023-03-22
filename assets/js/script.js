@@ -1,8 +1,5 @@
-const box = document.querySelectorAll("square");
 const statusDisplay = document.querySelector(".status");
 const restartGame = document.getElementById("restart");
-const imgx = document.getElementById('img-x');
-const imgo = document.getElementById('img-o');
 const tiles = document.getElementsByClassName('square');
 const winConditions =[
     [0,1,2],
@@ -15,12 +12,15 @@ const winConditions =[
     [2,4,6],
 ];
 
-let options = ["", "", "", "", "", "", "", "", ""];
+let blanks = ["", "", "", "", "", "", "", "", ""];
 let playerIcon = 'X';
 
 startGame();
 
 function startGame () {
+    Array.from(tiles).forEach(function(tile) {
+        tile.addEventListener('click', onTileClick);
+    });
     startPlayer = true
     statusDisplay.textContent = `Player ${playerIcon}'s turn`
     running = true;
@@ -28,8 +28,8 @@ function startGame () {
 
 function onTileClick (event) {
     const target = event.target;
-    if(!options[Number(target.id)]) {
-        options[Number(target.id)] = playerIcon;
+    if(!blanks[Number(target.id)]) {
+        blanks[Number(target.id)] = playerIcon;
         updateSquare(target.id);
         changePlayerIcon();
     }
@@ -50,9 +50,9 @@ function checkWinner () {
 
     for (let i = 0; i < winConditions; i++) {
         let condition = winConditions[i];
-        let tileA = options[condition[0]];
-        let tileB = options[condition[1]];
-        let tileC = options[condition[2]];
+        let tileA = blanks[condition[0]];
+        let tileB = blanks[condition[1]];
+        let tileC = blanks[condition[2]];
 
         if (tileA == "" || tileB == "" || tileC == "") {
             continue;
@@ -65,19 +65,16 @@ function checkWinner () {
     if (roundWon) {
         statusDisplay.textContent = `${playerIcon} WINS!`
         running = false;
-    } else if (!options.includes("")) {
+    } else if (!blanks.includes("")) {
         statusDisplay.textContent = `It's a DRAW!`
     }
 }
 /*
 function restartGame () {
-    options = ["", "", "", "", "", "", "", "", "",];
+    blanks = ["", "", "", "", "", "", "", "", "",];
     Array.from(tiles).forEach(function(tile) {
         tile.innerHTML = "";
     });
     changePlayerIcon();
 }
 */
-Array.from(tiles).forEach(function(tile) {
-    tile.addEventListener('click', onTileClick);
-});

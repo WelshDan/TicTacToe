@@ -15,6 +15,7 @@ body {
     max-width: 350px;
     padding: 10px;
     position: fixed;
+    display: inline-block;
     margin: auto;
     top: 15%;
     left: 50%;
@@ -65,6 +66,7 @@ body {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(3, auto);
+    position: relative;
 }
 
 .square {
@@ -75,7 +77,7 @@ body {
     cursor: pointer;
 }
 
-#playerIcon {
+.game-grid div {
     height: 90px;
     width: 90px;
     text-align: center;
@@ -84,15 +86,20 @@ body {
 /* Status bar and new game button*/
 
 .status {
+    width: fit-content;
     text-align: center;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 600;
+    padding: 10px;
+    margin: auto;
+    position: relative;
+    top: 15px;
 }
 
 .playAgain {
     text-align: center;
-    justify-content: center;
-    bottom: 15px;
+    position: relative;
+    top: 30px;
 }
 
 .playAgain button {
