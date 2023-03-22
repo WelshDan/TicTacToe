@@ -13,18 +13,25 @@ const winCheck =[
 ];
 
 let options = ["", "", "", "", "", "", "", "", "",]
-let player1 = "x";
-let player2 = "o";
+let startPlayer = "x";
 let running = false;
 
 startGame();
 
 function startGame () {
-
+    box.forEach(box => box.addEventListener("click", boxClicked))
+    restart.addEventListener("click", restartGame)
+    statusDisplay.textContent = `${player}'s turn`
+    running = true;
 }
 
 function squareClicked () {
-
+   const choice = this.getElementById("choice");
+   if (options ["choice"] != ""; || !running) {
+    return;
+   }
+    updateSquare(this, choice)
+   }
 }
 
 function updateSquare () {
