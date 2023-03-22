@@ -35,7 +35,7 @@ function squareClicked () {
    }
 
 function updateSquare () {
-    if ((startPlayer == true ? imgx : imgo))
+    if ((startPlayer == true)? imgx : imgo)
 }
 
 function changePlayer () {
