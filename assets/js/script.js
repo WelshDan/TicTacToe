@@ -44,19 +44,19 @@ function changePlayerIcon () {
     playerIcon = playerIcon === 'O' ? 'X' : 'O';
     statusDisplay.textContent = `Player ${playerIcon}'s turn`
 }
-/*
+
 function checkWinner () {
     let roundWon = false;
 
     for (let i = 0; i < winConditions; i++) {
         let condition = winConditions[i];
-        let cellA = options[condition[0]];
-        let cellB = options[condition[1]];
-        let cellC = options[condition[2]];
+        let tileA = options[condition[0]];
+        let tileB = options[condition[1]];
+        let tileC = options[condition[2]];
 
-        if (cellA == "" || cellB == "" || cellC == "") {
+        if (tileA == "" || tileB == "" || tileC == "") {
             continue;
-        } if (cellA == cellB && cellB == cellC) {
+        } if (tileA == tileB && tileB == tileC) {
             roundWon = true;
             break;
         }
@@ -67,8 +67,6 @@ function checkWinner () {
         running = false;
     } else if (!options.includes("")) {
         statusDisplay.textContent = `It's a DRAW!`
-    } else {
-        changePlayerIcon();
     }
 }
 /*

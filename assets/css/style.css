@@ -75,13 +75,10 @@ body {
     cursor: pointer;
 }
 
-.square:hover {
-    background-color: rgb(220, 219, 219);
-}
-
-#img-x #img-o {
-    max-width: 80px;
-    max-height: 80px;
+#playerIcon {
+    height: 90px;
+    width: 90px;
+    text-align: center;
 }
 
 /* Status bar and new game button*/
