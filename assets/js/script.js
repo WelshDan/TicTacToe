@@ -15,15 +15,13 @@ const winCheck =[
 ];
 
 let options = ["", "", "", "", "", "", "", "", "",]
-let startPlayer = "x";
+let startPlayer = true;
 let running = false;
 
 startGame();
-
 function startGame () {
-    box.forEach(box => box.addEventListener("click", boxClicked))
-    restart.addEventListener("click", restartGame)
-    statusDisplay.textContent = `${player}'s turn`
+    startPlayer = true
+    statusDisplay.textContent = `Player 1's turn`
     running = true;
 }
 
@@ -37,7 +35,7 @@ function squareClicked () {
    }
 
 function updateSquare () {
-
+    if ((startPlayer == true ? imgx : imgo))
 }
 
 function changePlayer () {
@@ -49,5 +47,9 @@ function winCheck () {
 }
 
 function restartGame () {
-
+    box.forEach(box => box.addEventListener("click", boxClicked))
+    restart.addEventListener("click", restartGame)
+    startPlayer = true
+    statusDisplay.textContent = `Player 1's turn`
+    running = true;
 }
