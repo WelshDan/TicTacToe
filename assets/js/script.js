@@ -4,7 +4,7 @@ const restartGame = document.getElementById("restart");
 const imgx = document.getElementById('img-x');
 const imgo = document.getElementById('img-o');
 const tiles = document.getElementsByClassName('square');
-const winCheck =[
+const winCombos =[
     [0,1,2],
     [3,4,5],
     [6,7,8],
@@ -16,13 +16,13 @@ const winCheck =[
 ];
 
 let options = ["", "", "", "", "", "", "", "", ""];
-let playerIcon = 'X';
+let playerIcon = '1';
 
 startGame();
 
 function startGame () {
     startPlayer = true
-    statusDisplay.textContent = `Player ${playerIcon} turn`
+    statusDisplay.textContent = `Player ${playerIcon}'s turn`
     running = true;
 }
 
@@ -41,22 +41,22 @@ function updateSquare (elementId) {
 }
 
 function changePlayerIcon () {
-    playerIcon = playerIcon === 'O' ? 'X' : 'O';
-    statusDisplay.textContent = `Player ${playerIcon} turn`
+    playerIcon = playerIcon === '2' ? '1' : '2';
+    statusDisplay.textContent = `Player ${playerIcon}'s turn`
 }
 
-function checkWinner () {
-// Add logic
+function checkWinner (tiles) {
+    if (winCheck = true ? statusDisplay.textContent = `Player ${playerIcon} Won!` : 
 }
-
-function onGameRestart () {
+/*
+function restartGame () {
     options = ["", "", "", "", "", "", "", "", "",];
     Array.from(tiles).forEach(function(tile) {
         tile.innerHTML = "";
     });
     changePlayerIcon();
 }
-
+*/
 Array.from(tiles).forEach(function(tile) {
     tile.addEventListener('click', onTileClick);
 });
