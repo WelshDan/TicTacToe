@@ -1,3 +1,4 @@
+const startGrid = [ "", "", "", "", "", "", "", "", "",]
 let isPlayer2 = false;
 let newGame = false;
 const string = newGame ? "" : (isPlayer2 ? "O" : "X");
@@ -8,22 +9,11 @@ const string = newGame ? "" : (isPlayer2 ? "O" : "X");
     alert(string);
   }
 
-
-
-
-
   let square = document.getElementById('0');
   square.addEventListener('click', add);
 
-
-
-
-
-
 const gameGrid = document.getElementById(".game-grid")
 const statusDisplay = document.querySelector(".status")
-
-
 
 const won =[
     [0,1,2],
@@ -35,40 +25,14 @@ const won =[
     [0,4,8],
     [2,4,6],
 ];
-/*
-newGame()
-playAgain.addEventListener('click', newGame)
-function newGame() {
-    isPlayer2 = false
-        square.classList.remove();
+
+function restart() {
+    console.log();
+}
+playAgain.addEventListener('click', startGrid)
+function restart() {
+    startGrid.forEach(("") => {
+        startGrid.classList.remove('square')
+    })
 }
 
-const element = document.getElementById("0");
-element.addEventListener('click', clickSquare);
-function clickSquare() {
-    alert("Hello");
-}
-
-function playerControl() 
-    if (player1) {
-
-}
-
-function checkMove(); {
-    if ("square" === "") {
-
-    }
-}
-
-function insertSign() {
-
-}
-
-function nextPlayer() {
-
-}
-
-function calculateWinner() {
-
-}
-*/
