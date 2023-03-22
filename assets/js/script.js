@@ -3,6 +3,7 @@ const statusDisplay = document.querySelector(".status");
 const restartGame = document.getElementById("restart");
 const imgx = document.getElementById('img-x');
 const imgo = document.getElementById('img-o');
+const tiles = document.getElementsByClassName('square');
 const winCheck =[
     [0,1,2],
     [3,4,5],
@@ -14,42 +15,48 @@ const winCheck =[
     [2,4,6],
 ];
 
-let options = ["", "", "", "", "", "", "", "", "",]
-let startPlayer = true;
-let running = false;
+let options = ["", "", "", "", "", "", "", "", ""];
+let playerIcon = 'X';
 
 startGame();
+
 function startGame () {
     startPlayer = true
-    statusDisplay.textContent = `Player 1's turn`
+    statusDisplay.textContent = `Player ${playerIcon} turn`
     running = true;
 }
 
-function squareClicked () {
-   const choice = this.getElementById("choice");
-   if (options ["choice"] != "" || !running) {
-    return;
-   }
-    updateSquare(this, choice);
-    winCheck();
-   }
-
-function updateSquare () {
-    if ((startPlayer == true)? imgx : imgo)
+function onTileClick (event) {
+    const target = event.target;
+    if(!options[Number(target.id)]) {
+        options[Number(target.id)] = playerIcon;
+        updateSquare(target.id);
+        changePlayerIcon();
+    }
+    checkWinner();
 }
 
-function changePlayer () {
-
+function updateSquare (elementId) {
+    document.getElementById(elementId).innerHTML = playerIcon;
 }
 
-function winCheck () {
-
+function changePlayerIcon () {
+    playerIcon = playerIcon === 'O' ? 'X' : 'O';
+    statusDisplay.textContent = `Player ${playerIcon} turn`
 }
 
-function restartGame () {
-    box.forEach(box => box.addEventListener("click", boxClicked))
-    restart.addEventListener("click", restartGame)
-    startPlayer = true
-    statusDisplay.textContent = `Player 1's turn`
-    running = true;
+function checkWinner () {
+// Add logic
 }
+
+function onGameRestart () {
+    options = ["", "", "", "", "", "", "", "", "",];
+    Array.from(tiles).forEach(function(tile) {
+        tile.innerHTML = "";
+    });
+    changePlayerIcon();
+}
+
+Array.from(tiles).forEach(function(tile) {
+    tile.addEventListener('click', onTileClick);
+});
