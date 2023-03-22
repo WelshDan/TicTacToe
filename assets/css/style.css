@@ -95,6 +95,10 @@ body {
     background-color: rgb(220, 219, 219);
 }
 
+#img-x #img-o {
+    max-width: 80px;
+    max-height: 80px;
+}
 
 /* Status bar and new game button*/
 

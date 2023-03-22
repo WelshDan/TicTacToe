@@ -1,6 +1,8 @@
 const box = document.querySelectorAll("square");
 const statusDisplay = document.querySelector(".status");
 const restartGame = document.getElementById("restart");
+const imgx = document.getElementById('img-x');
+const imgo = document.getElementById('img-o');
 const winCheck =[
     [0,1,2],
     [3,4,5],
@@ -27,12 +29,12 @@ function startGame () {
 
 function squareClicked () {
    const choice = this.getElementById("choice");
-   if (options ["choice"] != ""; || !running) {
+   if (options ["choice"] != "" || !running) {
     return;
    }
-    updateSquare(this, choice)
+    updateSquare(this, choice);
+    winCheck();
    }
-}
 
 function updateSquare () {
 
