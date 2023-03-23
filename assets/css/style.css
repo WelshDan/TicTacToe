@@ -61,12 +61,11 @@ body {
 
 .game-grid {
     margin-top: 250px;
-    position: relative;
+    position: flex;
     justify-content: center;
     align-items: center;
     display: grid;
     grid-template-columns: repeat(3, auto);
-    position: relative;
 }
 
 .square {
