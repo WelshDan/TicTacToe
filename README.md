@@ -24,7 +24,15 @@ At the bottom is the Play Again button which will restart the game, clearing the
 
 ### Page layout
 
+## Testing
 
+## Bugs
+
+## Validator testing
+
+## Deployment
+
+## Credits
 
 Tips and help:
 W3.org - centering of start box / color coding

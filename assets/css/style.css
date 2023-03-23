@@ -122,6 +122,19 @@ body {
     border: 2px solid black;
     cursor: pointer;
 }
+
+
+/* Footer setting */
+
+.footer-text {
+    font-size: 0.6rem;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+}
+
+
+/* Media Screen settings */
 @media screen and (max-width:300px) {
     .main-box {
     height: 10vh;

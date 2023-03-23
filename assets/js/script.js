@@ -31,7 +31,6 @@ function onTileClick (event) {
     if(!blanks[Number(target.id)]) {
         blanks[Number(target.id)] = playerIcon;
         updateSquare(target.id);
-        changePlayerIcon();
     }
     checkWinner();
 }
@@ -48,7 +47,7 @@ function changePlayerIcon () {
 function checkWinner () {
     let roundWon = false;
 
-    for (let i = 0; i < winConditions; i++) {
+    for (let i = 0; i < winConditions.length; i++) {
         let condition = winConditions[i];
         let tileA = blanks[condition[0]];
         let tileB = blanks[condition[1]];
@@ -67,6 +66,8 @@ function checkWinner () {
         running = false;
     } else if (!blanks.includes("")) {
         statusDisplay.textContent = `It's a DRAW!`
+    } else {
+        changePlayerIcon();
     }
 }
 /*
