@@ -39,7 +39,7 @@ function updateSquare (elementId) {
 }
 
 function changePlayerIcon () {
-    playerIcon = playerIcon === 'O' ? 'X' : 'O';
+    playerIcon = (playerIcon === 'O') ? 'X' : 'O';
     statusDisplay.textContent = `Player ${playerIcon}'s turn`
 }
 
@@ -70,12 +70,11 @@ function checkWinner () {
     }
 }
 
-function restartGame () {
-  alert("hello")
+function playAgain () {
+    location.reload();
 }
-
-restart.addEventListener('click', restartGame);
+restart.addEventListener('click', playAgain);
+blanks = ["", "", "", "", "", "", "", "", ""];
 startPlayer = true
-statusDisplay.textContent = `Player ${playerIcon}'s turn`
 running = true;
 
