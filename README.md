@@ -4,7 +4,6 @@ This website provides a simple game for two human players to play the classic ga
 
 This game shows the basic functions in HTML, CSS and JavaScript so can be interesting to look at from that perspective - if the game is not interesting enough!
 
-ENTER MULTI MEDIA PICTURES!!
 ![Screenshot](assets/images/multidevice.jpg)
 
 ## Features
@@ -37,10 +36,10 @@ And finally the footer which includes the author of the website.
 
 ## Bugs
 
-There are a few bugs which have been unfortunately unfixed before deploying.
-  Layout of game grid is not aligned correctly on the iPad on the MultiDevice picture. Media query settings were not sufficient to correct this.
-  The "playAgain" button that reloads the page could not be formed so I have put in a reload page function in its place.
-  The click to choose a square (also choosePlayerIcon function) stopped being stable just as I was finishing the project and so it changes active player every time the button is clicked in the square as opposed to only when the X or O is chosen.
+There are a few bugs which have been unfortunately unfixed before deploying.<br>
+  Layout of game grid is not aligned correctly on the iPad on the MultiDevice picture. Media query settings were not sufficient to correct this.<br>
+  The "playAgain" button that reloads the page could not be formed so I have put in a reload page function in its place.<br>
+  The click to choose a square (also choosePlayerIcon function) stopped being stable just as I was finishing the project and so it changes active player every time the button is clicked in the square as opposed to only when the X or O is chosen.<br>
 
 
 ## Validator testing
@@ -66,8 +65,8 @@ https://welshdan.github.io/TicTacToe/
 
 Tips and help:
 
-W3.org - centering of start box / color coding
-JavaScript Master - startGame functions and layout help (https://www.youtube.com/watch?v=Slj9rPBJTcY&t=1214s)
-Emer Heffernan, personal tutoring and help
-Code.mu Winner check function (https://code.mu/en/javascript/book/practice/tick-tack-toe/victory-checking/)
-My mentor Akshat Garg, for his guidance and assistance.
+W3.org - centering of start box / color coding<br>
+JavaScript Master - startGame functions and layout help (https://www.youtube.com/watch?v=Slj9rPBJTcY&t=1214s)<br>
+Emer Heffernan, personal tutoring and help<br>
+Code.mu Winner check function (https://code.mu/en/javascript/book/practice/tick-tack-toe/victory-checking/)<br>
+My mentor Akshat Garg, for his guidance and assistance.<br>
