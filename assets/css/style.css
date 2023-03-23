@@ -137,7 +137,7 @@ body {
 /* Media Screen settings */
 @media screen and (max-width:300px) {
     .main-box {
-        top: 20%;
+        top: 10%;
     }
 
     .options div {
