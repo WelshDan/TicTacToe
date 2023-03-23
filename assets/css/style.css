@@ -60,12 +60,13 @@ body {
 /* Game grid settings */
 
 .game-grid {
-    margin-top: 250px;
-    position: flex;
+    margin-top: 200px;
+    position: relative;
     justify-content: center;
     align-items: center;
     display: grid;
     grid-template-columns: repeat(3, auto);
+    position: relative;
 }
 
 .square {
