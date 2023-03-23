@@ -9,20 +9,31 @@ ENTER MULTI MEDIA PICTURES!!
 
 ## Features
 
-### Navigation
+
+### Page layout
+
 
 The website is all focused onto one page so there are no links to any other pages.
 
-There is a Heading Box at the top which displays the name of the game and also which player is playing.
+There is a Heading Box at the top which displays the name of the game and that there are two players who can play.
+
+![Screenshot](assets/images/pagelayout1.jpg)
 
 In the middle of the page is the playing grid. Is is a 3x3 grid of squares that can be clicked on during the duration of the game. Player 1 will enter X's and Player 2 will enter O's.
 
+![Screenshot](assets/images/pagelayout2.jpg)
+
 There is a text information underneath the playing grid, I have called it the status bar. It shows who's current turn it is and also if the match has been won or drawn.
+
+![Screenshot](assets/images/pagelayout3.jpg)
 
 At the bottom is the Play Again button which will restart the game, clearing the grid of previous game information.
 
+![Screenshot](assets/images/pagelayout4.jpg)
 
-### Page layout
+And finally the footer which includes the author of the website.
+
+![Screenshot](assets/images/pagelayout5.jpg)
 
 ## Testing
 
