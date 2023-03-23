@@ -1,5 +1,4 @@
 const statusDisplay = document.querySelector(".status");
-const restartGame = document.getElementById("restart");
 const tiles = document.getElementsByClassName('square');
 const winConditions =[
     [0,1,2],
@@ -70,12 +69,13 @@ function checkWinner () {
         changePlayerIcon();
     }
 }
-/*
+
 function restartGame () {
-    blanks = ["", "", "", "", "", "", "", "", "",];
-    Array.from(tiles).forEach(function(tile) {
-        tile.innerHTML = "";
-    });
-    changePlayerIcon();
+  alert("hello")
 }
-*/
+
+restart.addEventListener('click', restartGame);
+startPlayer = true
+statusDisplay.textContent = `Player ${playerIcon}'s turn`
+running = true;
+
