@@ -60,7 +60,7 @@ body {
 /* Game grid settings */
 
 .game-grid {
-    margin-top: 200px;
+    margin-top: 250px;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -148,5 +148,9 @@ body {
         padding: 1px;
         position: fixed;
         bottom: 0;
+    }
+
+    .game-grid {
+        border-top: 20px;
     }
 }
