@@ -98,13 +98,13 @@ body {
     top: 15px;
 }
 
-.playAgain {
+.restart-game {
     text-align: center;
     position: relative;
     top: 30px;
 }
 
-.playAgain button {
+.restart-game button {
     font-size: 1rem;
     font-weight: 200;
     max-width: 100px;
@@ -114,7 +114,7 @@ body {
     border-radius: 10px;
 }
 
-.playAgain button:hover {
+.restart-game button:hover {
     font-size: 1rem;
     background-color: orange;
     color: white;
