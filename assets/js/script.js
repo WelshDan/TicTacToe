@@ -1,7 +1,7 @@
 const statusDisplay = document.querySelector(".status");
 const tiles = document.getElementsByClassName('square');
 const playAgain = document.getElementsByClassName("playAgain")
-const winConditions =[
+const winConditions = [
     [0,1,2],
     [3,4,5],
     [6,7,8],
@@ -76,7 +76,8 @@ function newGame () {
     blanks = ["", "", "", "", "", "", "", "", ""];
     playerIcon = 'X'
     tiles.forEach(tile => tile.textContent = "");
+    newGame.addEventListener("click", newGame);
     statusDisplay.textContent = `Player ${playerIcon}'s turn`
 
-    startGame();
-    }
+startGame();
+}
