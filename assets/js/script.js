@@ -1,6 +1,6 @@
 const statusDisplay = document.querySelector(".status");
 const tiles = document.getElementsByClassName('square');
-const playAgain = document.getElementsByClassName("playAgain")
+const playAgain = document.getElementsByClassName("playAgain");
 const winConditions = [
     [0,1,2],
     [3,4,5],
@@ -20,8 +20,8 @@ startGame();
 
 function startGame () {
     Array.from(tiles).forEach(function(tile) {
-        tile.addEventListener('click', onTileClick);
-    });
+    tile.addEventListener('click', onTileClick);
+});
     restart.addEventListener("click", newGame);
     statusDisplay.textContent = `Player ${playerIcon}'s turn`
     running = true;
@@ -33,7 +33,7 @@ function onTileClick (event) {
         blanks[Number(target.id)] = playerIcon;
         updateSquare(target.id);
     }
-    checkWinner();
+    checkWinner ()
 }
 
 function updateSquare (elementId) {
@@ -41,7 +41,7 @@ function updateSquare (elementId) {
 }
 
 function changePlayerIcon () {
-    playerIcon = (playerIcon === 'O') ? 'X' : 'O';
+    playerIcon = (playerIcon === 'X') ? 'O' : 'X';
     statusDisplay.textContent = `Player ${playerIcon}'s turn`
 }
 
@@ -73,11 +73,7 @@ function checkWinner () {
 }
 
 function newGame () {
-    blanks = ["", "", "", "", "", "", "", "", ""];
-    playerIcon = 'X'
-    tiles.forEach(tile => tile.textContent = "");
-    newGame.addEventListener("click", newGame);
-    statusDisplay.textContent = `Player ${playerIcon}'s turn`
-
-startGame();
-}
+    addEventListener("click", newGame);
+    if (!document.getElementById("p") == "") {
+    document.getElementById("p").remove.innerHTML;    
+    }}
