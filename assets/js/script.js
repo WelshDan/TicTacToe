@@ -22,27 +22,23 @@ function startGame () {
     Array.from(tiles).forEach(function(tile) {
     tile.addEventListener('click', onTileClick);
 });
-    restart.addEventListener("click", newGame);
     statusDisplay.textContent = `Player ${playerIcon}'s turn`
     running = true;
 }
 
 function onTileClick (event) {
-    const target = event.target;
-    if(!blanks[Number(target.id)]) {
-        blanks[Number(target.id)] = playerIcon;
-        updateSquare(target.id);
+    if (running){
+        const target = event.target;
+        if (target.innerHTML !== "") {
+            if (!blanks[Number(target.id)]) {
+                blanks[Number(target.id)] = playerIcon;
+                updateSquare(target.id);
+        }
+        checkWinner ()
+        }
+    } else {
+        return
     }
-    checkWinner ()
-}
-
-function updateSquare (elementId) {
-    document.getElementById(elementId).innerHTML = playerIcon;
-}
-
-function changePlayerIcon () {
-    playerIcon = (playerIcon === 'X') ? 'O' : 'X';
-    statusDisplay.textContent = `Player ${playerIcon}'s turn`
 }
 
 function checkWinner () {
@@ -65,6 +61,7 @@ function checkWinner () {
     if (roundWon) {
         statusDisplay.textContent = `${playerIcon} WINS!`
         running = false;
+
     } else if (!blanks.includes("")) {
         statusDisplay.textContent = `It's a DRAW!`
     } else {
@@ -72,8 +69,15 @@ function checkWinner () {
     }
 }
 
+function updateSquare (elementId) {
+    document.getElementById(elementId).innerHTML = playerIcon;
+}
+
+function changePlayerIcon () {
+    playerIcon = (playerIcon === 'X') ? 'O' : 'X';
+    statusDisplay.textContent = `Player ${playerIcon}'s turn`
+}
+
 function newGame () {
-    addEventListener("click", newGame);
-    if (!document.getElementById("p") == "") {
-    document.getElementById("p").remove.innerHTML;    
-    }}
+    newGame.addEventListener("click", newGame);
+    console.log("Hello");}
