@@ -36,10 +36,18 @@ And finally the footer which includes the author of the website.
 
 ## Bugs
 
-There are a few bugs which have been unfortunately unfixed before deploying.<br>
-  Layout of game grid is not aligned correctly on the iPad on the MultiDevice picture. Media query settings were not sufficient to correct this.<br>
-  The "playAgain" button that reloads the page could not be formed so I have put in a reload page function in its place.<br>
-  The click to choose a square (also choosePlayerIcon function) stopped being stable just as I was finishing the project and so it changes active player every time the button is clicked in the square as opposed to only when the X or O is chosen.<br>
+### Resolved issues
+
+There were a few bugs which have now been remedied:
+ - Squares could be clicked on multiple times and that also saw a change of player. What should have happened is that the square once chosen is then blocked from further changes. This issue was solved by ensuring that only empty squares could be clicked on.<br>
+ - The player could continue clicking on empty squares even after the game was finished. Empty squares could still be clicked on and that was stopped by inserting a check to see if the game was over and then if the game was over, the ability to click on an empty box was removed.
+ <br>
+
+### Unresolved issues
+
+- Clicking on the "New Game" button did not clear the board and reset addEventListeners as desired but a reload page command was inserted that meant that a new game can start after clicking on "New Game".<br>
+
+- Layout of game grid is not aligned correctly on the iPad on the MultiDevice picture. Media query settings were not sufficient to correct this.<br>
 
 
 ## Validator testing

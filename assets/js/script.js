@@ -1,3 +1,4 @@
+/* */
 const statusDisplay = document.querySelector(".status");
 const tiles = document.getElementsByClassName('square');
 const playAgain = document.getElementsByClassName("playAgain");
@@ -16,30 +17,54 @@ let blanks = ["", "", "", "", "", "", "", "", ""];
 let playerIcon = 'X';
 let running = false;
 
+/* Game start command and reading the game tiles for playing */
 startGame();
 
 function startGame () {
     Array.from(tiles).forEach(function(tile) {
     tile.addEventListener('click', onTileClick);
-});
+    });
     statusDisplay.textContent = `Player ${playerIcon}'s turn`
     running = true;
 }
+
+/* Tile is chosen by player. Before the players icon 'X' or 'O' is inserted
+the game is checked to see if there is a winner and then if the tile chosen is empty*/
+
 
 function onTileClick (event) {
     if (running){
         const target = event.target;
         if (target.innerHTML !== "") {
-            if (!blanks[Number(target.id)]) {
+            if (!blanks[Number(target.id)]) {  
                 blanks[Number(target.id)] = playerIcon;
                 updateSquare(target.id);
-        }
+                changePlayerIcon();
+            }
         checkWinner ()
         }
     } else {
         return
     }
 }
+
+/* 
+
+function updateSquare (elementId) {
+    document.getElementById(elementId).innerHTML = playerIcon;
+}
+
+/* Player turn is changed. Active player icon to be inserted on click
+of empty tile changes between 'X' and 'O' */
+
+function changePlayerIcon () {
+    playerIcon = (playerIcon === 'O') ? 'X' : 'O';
+    statusDisplay.textContent = `Player ${playerIcon}'s turn`
+}
+
+/* If there are three of the same player icons in a row then a winner is
+decided. Otherwise the game results in a draw. A status is also displayed
+showing that X or O are the winner, or if it is a draw */
 
 function checkWinner () {
     let roundWon = false;
@@ -61,23 +86,15 @@ function checkWinner () {
     if (roundWon) {
         statusDisplay.textContent = `${playerIcon} WINS!`
         running = false;
-
     } else if (!blanks.includes("")) {
         statusDisplay.textContent = `It's a DRAW!`
-    } else {
-        changePlayerIcon();
     }
 }
 
-function updateSquare (elementId) {
-    document.getElementById(elementId).innerHTML = playerIcon;
-}
-
-function changePlayerIcon () {
-    playerIcon = (playerIcon === 'X') ? 'O' : 'X';
-    statusDisplay.textContent = `Player ${playerIcon}'s turn`
-}
+/* On click of "New Game button", page is a reloaded so a
+new game can begin */
 
 function newGame () {
-    newGame.addEventListener("click", newGame);
-    console.log("Hello");}
+    location.reload();
+}
+restart.addEventListener('click', newGame);
