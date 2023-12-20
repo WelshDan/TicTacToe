@@ -13,7 +13,7 @@ const winConditions = [
     [2,4,6],
 ];
 const clear = document.querySelector(".playAgain");
-clear.addEventListener('click', clearGame)
+clear.addEventListener('click', newGame);
 
 let blanks = ["", "", "", "", "", "", "", "", ""];
 let playerIcon = 'X';
@@ -92,14 +92,6 @@ function checkWinner () {
     }
 }
 
-/* On click of "New Game button", page is a reloaded so a
-new game can begin */
-
-function newGame () {
-    clearGame();
-    startGame();
-}
-
 /* Add a function that clears all of the used tiles to show
 9 empty ones */
 
@@ -112,4 +104,11 @@ function clearGame () {
     playerIcon = 'X';
     running = true;
     statusDisplay.textContent = `NEW GAME! Player ${playerIcon}'s turn`
+}
+
+/* On click of "New Game button", page is a reloaded so a
+new game can begin */
+
+function newGame () {
+    clearGame();
 }
