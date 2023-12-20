@@ -12,6 +12,8 @@ const winConditions = [
     [0,4,8],
     [2,4,6],
 ];
+const clear = document.querySelector(".playAgain");
+clear.addEventListener('click', clearGame)
 
 let blanks = ["", "", "", "", "", "", "", "", ""];
 let playerIcon = 'X';
@@ -48,8 +50,6 @@ function onTileClick (event) {
     }
 }
 
-/* 
-
 function updateSquare (elementId) {
     document.getElementById(elementId).innerHTML = playerIcon;
 }
@@ -84,6 +84,7 @@ function checkWinner () {
     }
 
     if (roundWon) {
+        changePlayerIcon();
         statusDisplay.textContent = `${playerIcon} WINS!`
         running = false;
     } else if (!blanks.includes("")) {
@@ -95,6 +96,20 @@ function checkWinner () {
 new game can begin */
 
 function newGame () {
-    location.reload();
+    clearGame();
+    startGame();
 }
-restart.addEventListener('click', newGame);
+
+/* Add a function that clears all of the used tiles to show
+9 empty ones */
+
+function clearGame () {
+    Array.from(tiles).forEach(function(tile) {
+        tile.innerHTML = "";
+    });
+    
+    blanks = ["", "", "", "", "", "", "", "", ""];
+    playerIcon = 'X';
+    running = true;
+    statusDisplay.textContent = `NEW GAME! Player ${playerIcon}'s turn`
+}
