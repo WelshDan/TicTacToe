@@ -45,13 +45,13 @@ body {
     left: 20px;
 }
 
-.player1 {
+.player-x {
     margin-right: 0.625rem;
     background-color: rgb(0,0,255, 0.8);
     color: white;
 }
 
-.player2 {
+.player-o {
     margin-left: 0.625rem;
     background-color: rgb(255, 0, 0, 0.8);
     color: white;
