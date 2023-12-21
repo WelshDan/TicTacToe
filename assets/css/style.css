@@ -17,7 +17,7 @@ body {
     position: fixed;
     display: inline-block;
     margin: auto;
-    top: 15%;
+    top: 7rem;
     left: 50%;
     transform: translate(-50%, -50%)
 }
@@ -68,14 +68,6 @@ body {
     grid-template-columns: repeat(3, auto);
 }
 
-.square {
-    width: 100px;
-    height: 100px;
-    border: 2px solid grey;
-    background: white;
-    cursor: pointer;
-}
-
 .game-grid div {
     height: 90px;
     width: 90px;
@@ -83,6 +75,13 @@ body {
     font-size: 85px;
 }
 
+.square {
+    width: 100px;
+    height: 100px;
+    border: 2px solid grey;
+    background: white;
+    cursor: pointer;
+}
 
 /* Status bar and new game button*/
 
