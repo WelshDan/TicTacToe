@@ -78,3 +78,9 @@ JavaScript Master - startGame functions and layout help (https://www.youtube.com
 Emer Heffernan, personal tutoring and help<br>
 Code.mu Winner check function (https://code.mu/en/javascript/book/practice/tick-tack-toe/victory-checking/)<br>
 My mentor Akshat Garg, for his guidance and assistance.<br>
+
+
+## Things to be added:
+
+python3 -m http.server to run game from console
+

@@ -15,7 +15,7 @@ const winConditions = [
 const clear = document.querySelector(".playAgain");
 clear.addEventListener('click', newGame);
 
-let blanks = ["", "", "", "", "", "", "", "", ""];
+let blanks = Array(9).fill("");
 let playerIcon = 'X';
 let running = false;
 
@@ -100,7 +100,7 @@ function clearGame () {
         tile.innerHTML = "";
     });
     
-    blanks = ["", "", "", "", "", "", "", "", ""];
+    blanks = Array(9).fill("");
     playerIcon = 'X';
     running = true;
     statusDisplay.textContent = `NEW GAME! Player ${playerIcon}'s turn`
