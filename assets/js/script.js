@@ -43,10 +43,10 @@ function onTileClick(event) {
                 updateSquare(target.id);
                 changePlayerIcon();
             }
-        checkWinner ()
+        checkWinner();
         }
     } else {
-        return
+        return;
     }
 };
 
@@ -93,11 +93,15 @@ function checkWinner() {
 };
 
 /* Add a function that clears all of the used tiles to show
-9 empty ones */
+9 empty ones.
+I have added the paragraph tags in the clearGame function
+for it to match how it is laid out in index.html. It doesn't work
+without these there.
+*/
 
 function clearGame() {
     Array.from(tiles).forEach(function(tile) {
-        tile.innerHTML = "";
+        tile.innerHTML = "<p></p>";
     });
     
     blanks = Array(9).fill("");
