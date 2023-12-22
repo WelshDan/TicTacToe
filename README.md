@@ -84,3 +84,5 @@ My mentor Akshat Garg, for his guidance and assistance.<br>
 
 python3 -m http.server to run game from console
 
+Lighthouse recommendatioms:
+html beautify
