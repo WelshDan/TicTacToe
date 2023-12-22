@@ -1,4 +1,3 @@
-/* */
 const statusDisplay = document.querySelector(".status");
 const tiles = document.getElementsByClassName('square');
 const playAgain = document.getElementsByClassName("playAgain");
@@ -28,7 +27,7 @@ function startGame() {
     });
     statusDisplay.textContent = `Player ${playerIcon}'s turn`;
     running = true;
-};
+}
 
 /* Tile is chosen by player. Before the players icon 'X' or 'O' is inserted
 the game is checked to see if there is a winner and then if the tile chosen is empty*/
