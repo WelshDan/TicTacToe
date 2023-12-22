@@ -53,8 +53,8 @@ body {
 
 .player-o {
     margin-left: 0.625rem;
-    background-color: rgb(255, 0, 0, 0.8);
-    color: white;
+    background-color: rgb(255, 153, 153);
+    color: black;
 }
 
 /* Game grid settings */
