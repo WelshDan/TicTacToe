@@ -34,6 +34,11 @@ And finally the footer which includes the author of the website.
 
 ![Screenshot](assets/images/pagelayout5.jpg)
 
+## Testing
+
+
+
+
 ## Bugs
 
 ### Resolved issues
