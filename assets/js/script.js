@@ -115,3 +115,8 @@ new game can begin */
 function newGame() {
     clearGame();
 };
+
+
+function btnRestart() {
+    
+}
