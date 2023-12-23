@@ -14,7 +14,7 @@ body {
     width: 100%;
     max-width: 350px;
     padding: 10px;
-    position: fixed;
+    position: relative;
     display: inline-block;
     margin: auto;
     top: 7rem;
@@ -60,7 +60,7 @@ body {
 /* Game grid settings */
 
 .game-grid {
-    margin-top: 200px;
+    margin-top: 100px;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@ body {
     grid-template-columns: repeat(3, auto);
 }
 
-.game-grid, .error-grid div {
+.game-grid div, .error-grid div {
     height: 90px;
     width: 90px;
     text-align: center;
@@ -102,7 +102,7 @@ body {
     top: 30px;
 }
 
-.restart-game, .error-return button {
+.restart-game button, .error-return button {
     font-size: 1rem;
     font-weight: 200;
     max-width: 100px;
@@ -112,7 +112,7 @@ body {
     border-radius: 10px;
 }
 
-.restart-game, .error-return button:hover {
+.restart-game button:hover, .error-return button:hover {
     font-size: 1rem;
     background-color: orange;
     color: white;
@@ -141,6 +141,9 @@ body {
     grid-template-columns: repeat(3, auto);
 }
 
+.error-status {
+    text-align: center;
+}
 
 /* Media Screen settings */
 @media screen and (max-width:300px) {
