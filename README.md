@@ -91,3 +91,4 @@ python3 -m http.server to run game from console
 
 Lighthouse recommendatioms:
 html beautify
+404page guide: https://www.youtube.com/watch?v=vRbBvlDuolc user codewj

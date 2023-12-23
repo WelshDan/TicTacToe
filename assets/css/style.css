@@ -132,6 +132,25 @@ body {
 }
 
 
+/* 404 error page settings */
+
+.error-grid {
+    margin-top: 200px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.error-grid div {
+    height: 90px;
+    width: 90px;
+    text-align: center;
+    font-size: 85px;
+}
+
+
 /* Media Screen settings */
 @media screen and (max-width:300px) {
     .main-box {
