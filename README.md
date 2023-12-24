@@ -1,8 +1,45 @@
-# Tic Tac Toe
+# Tic Tac Toe ![Screenshot](assets/images/favicon.ico)
 
-This website provides a simple game for two human players to play the classic game Tic Tac Toe. Tic Tac Toe is a turn-based game where players take it in turns to lay their game piece in a 3x3 grid with the aim of forming three-in-a-row. The match is won when a player can get three of their own game piece in a row, whether it be horizontally, vertically or diagonally. A match can be drawn if neither player achieves a three-in-a-row before all the areas of the grid have been filled. Then the game can be just restarted and enjoyed all over again!
+A simple game to be enjoyed with a friend.
 
-This game shows the basic functions in HTML, CSS and JavaScript so can be interesting to look at from that perspective - if the game is not interesting enough!
+=====
+
+### The idea behind Tic Tac Toe
+
+This website provides a simple game for two human players to play the classic game Tic Tac Toe.
+
+#### What is Tic Tac Toe
+
+Tic Tac Toe is a turn-based game where players take it in turns to lay their game piece in a 3x3 grid with the aim of forming three-in-a-row
+
+Basic Rules:
+- Players take it in turns to click on a grid to place their game piece, whether it be an X or an O
+- The match is won when a player can get three of their own game piece in a row, whether it be horizontally, vertically or diagonally
+- A match can be drawn if neither player achieves a three-in-a-row before all the areas of the grid have been filled
+
+-----
+## Table of contents
+
+1. Planning
+2. App Layout
+3. Used Technologies
+4. Installation
+5. Usage
+6. Testing issues Testing Bugs
+7. Problems and incompletions
+8. Credits
+
+-----
+
+### 1. Planning
+
+#### Functionality
+
+The aim of the game was to show how basic functions in HTML, CSS and JavaScript can be used to create a relatively simple game.
+
+-----
+
+### 2. Layout
 
 ![Screenshot](assets/images/multidevice.jpg)
 
@@ -35,6 +72,8 @@ And finally the footer which includes the author of the website.
 ![Screenshot](assets/images/pagelayout5.jpg)
 
 ## Testing
+
+### Manual testing
 
 
 

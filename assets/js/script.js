@@ -29,8 +29,10 @@ function startGame() {
     running = true;
 }
 
-/* Tile is chosen by player. Before the players icon 'X' or 'O' is inserted
-the game is checked to see if there is a winner and then if the tile chosen is empty*/
+/* Tile is chosen by player.
+Before the player's icon 'X' or 'O' is inserted into a chosen grid square,
+the game is checked to see if there is a winner and then if the tile chosen
+is empty*/
 
 
 function onTileClick(event) {
@@ -47,11 +49,14 @@ function onTileClick(event) {
     } else {
         return;
     }
-};
+}
 
-function updateSquare (elementId) {
+/* The square is updated with the player's icon(X or O) if the game
+is still active (not won or drawn) */
+
+function updateSquare(elementId) {
     document.getElementById(elementId).innerHTML = playerIcon;
-};
+}
 
 /* Player turn is changed. Active player icon to be inserted on click
 of empty tile changes between 'X' and 'O' */
@@ -59,16 +64,17 @@ of empty tile changes between 'X' and 'O' */
 function changePlayerIcon() {
     playerIcon = (playerIcon === 'O') ? 'X' : 'O';
     statusDisplay.textContent = `Player ${playerIcon}'s turn`;
-};
+}
 
 /* If there are three of the same player icons in a row then a winner is
-decided. Otherwise the game results in a draw. A status is also displayed
-showing that X or O are the winner, or if it is a draw */
+decided. When all tiles have been filled without a three-in-a-row then the
+game results in a draw. A status is also displayed showing that X or O are
+the winner, or if it is a draw */
 
 function checkWinner() {
     let roundWon = false;
 
-    for (let i = 0; i < winConditions.length; i++) {
+    for (let i = 0; i <winConditions.length; i++) {
         let condition = winConditions[i];
         let tileA = blanks[condition[0]];
         let tileB = blanks[condition[1]];
@@ -89,13 +95,12 @@ function checkWinner() {
     } else if (!blanks.includes("")) {
         statusDisplay.textContent = `It's a DRAW!`;
     }
-};
+}
 
-/* Add a function that clears all of the used tiles to show
-9 empty ones.
-I have added the paragraph tags in the clearGame function
+/* This function clears the game tiles of their X's and O's.
+Note: I have added the paragraph tags in the clearGame function
 for it to match how it is laid out in index.html. It doesn't work
-without these there.
+without these in place.
 */
 
 function clearGame() {
@@ -107,16 +112,11 @@ function clearGame() {
     playerIcon = 'X';
     running = true;
     statusDisplay.textContent = `NEW GAME! Player ${playerIcon}'s turn`;
-};
+}
 
 /* On click of "New Game button", page is a reloaded so a
 new game can begin */
 
 function newGame() {
     clearGame();
-};
-
-
-function btnRestart() {
-    
 }
