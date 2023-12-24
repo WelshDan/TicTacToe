@@ -2,7 +2,7 @@
 
 A simple game to be enjoyed with a friend.
 
-=====
+===============
 
 ### The idea behind Tic Tac Toe
 
@@ -17,7 +17,8 @@ Basic Rules:
 - The match is won when a player can get three of their own game piece in a row, whether it be horizontally, vertically or diagonally
 - A match can be drawn if neither player achieves a three-in-a-row before all the areas of the grid have been filled
 
------
+---------------
+
 ## Table of contents
 
 1. Planning
@@ -29,7 +30,7 @@ Basic Rules:
 7. Problems and incompletions
 8. Credits
 
------
+---------------
 
 ### 1. Planning
 
@@ -37,35 +38,47 @@ Basic Rules:
 
 The aim of the game was to show how basic functions in HTML, CSS and JavaScript can be used to create a relatively simple game.
 
------
+---------------
 
 ### 2. Layout
 
+The website main page was run through the **[Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php)**
 ![Screenshot](assets/images/multidevice.jpg)
+
+The are two webpages in project in total. The main page and the 404 page.
 
 ## Features
 
 
 ### Page layout
 
+#### Design
 
-The website is all focused onto one page so there are no links to any other pages.
+##### Icons and images
 
-There is a Heading Box at the top which displays the name of the game and that there are two players who can play.
+The favicon logo was created with the **[Favicon ](https://favicon.io/)**
 
-![Screenshot](assets/images/pagelayout1.jpg)
+The game is focused onto one page so there are no links to any other pages.
+
+#### Interactive parts
 
 In the middle of the page is the playing grid. Is is a 3x3 grid of squares that can be clicked on during the duration of the game. Player 1 will enter X's and Player 2 will enter O's.
 
 ![Screenshot](assets/images/pagelayout2.jpg)
 
-There is a text information underneath the playing grid, I have called it the status bar. It shows who's current turn it is and also if the match has been won or drawn.
-
-![Screenshot](assets/images/pagelayout3.jpg)
-
 At the bottom is the Play Again button which will restart the game, clearing the grid of previous game information.
 
 ![Screenshot](assets/images/pagelayout4.jpg)
+
+#### Non-interactive parts
+
+There is a heading box at the top which displays the name of the game and that there are two players who can play.
+
+![Screenshot](assets/images/pagelayout1.jpg)
+
+There is a text information underneath the playing grid, I have called it the status bar. It shows who's current turn it is and also if the match has been won or drawn.
+
+![Screenshot](assets/images/pagelayout3.jpg)
 
 And finally the footer which includes the author of the website.
 
@@ -83,15 +96,14 @@ And finally the footer which includes the author of the website.
 ### Resolved issues
 
 There were a few bugs which have now been remedied:
- - Squares could be clicked on multiple times and that also saw a change of player. What should have happened is that the square once chosen is then blocked from further changes. This issue was solved by ensuring that only empty squares could be clicked on.<br>
+ - Squares could be clicked on multiple times and that also saw a change of player. What should have happened is that the square once chosen is then blocked from further changes. This issue was solved by ensuring that only empty squares could be clicked on.<
  - The player could continue clicking on empty squares even after the game was finished. Empty squares could still be clicked on and that was stopped by inserting a check to see if the game was over and then if the game was over, the ability to click on an empty box was removed.
- <br>
+ - A 404 error page has now been added.
+ - Clicking on the "New Game" button did not previously clear the board and reset addEventListeners as desired but this has been remedied due to adding this in the clear game function: **tile.innerHTML = "<p></p>";**
+ This matches what is contained in each grid sqaure in the index file and due to this added paragraph element, the play again button and the event listeners attached to the grid  squares operate correctly.
+- Layout of game grid was not aligned correctly on the iPad on the MultiDevice picture but this has been correct by giving the top box a positioning of relative and adjusting the top margin values slightly.
+- Blanks arrays have been replace with an array.fill function to list the empty tiles in the grid (blanks = Array(9).fill("");)
 
-### Unresolved issues
-
-- Clicking on the "New Game" button did not clear the board and reset addEventListeners as desired but a reload page command was inserted that meant that a new game can start after clicking on "New Game".<br>
-
-- Layout of game grid is not aligned correctly on the iPad on the MultiDevice picture. Media query settings were not sufficient to correct this.<br>
 
 
 ## Validator testing
