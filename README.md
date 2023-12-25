@@ -300,6 +300,7 @@ There were a few bugs which have now been remedied:
  - This matches what is contained in each grid sqaure in the index file and due to this added paragraph element, the play again button and the event listeners attached to the grid  squares operate correctly.
 - Layout of game grid was not aligned correctly on the iPad on the MultiDevice picture but this has been correct by giving the top box a positioning of relative and adjusting the top margin values slightly.
 - Blanks arrays have been replace with an array.fill function to list the empty tiles in the grid (blanks = Array(9).fill("");)
+- 404 page was not linking to the index.html file. This was because I had wrapped an a element around a div instead of the other way around. After correcting this, on clicking the 404 numbers in the link, the user is returned to home page
 
 #### 7.2 Unresolved issues
 
