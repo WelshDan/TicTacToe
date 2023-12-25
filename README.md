@@ -1,4 +1,4 @@
-# Tic Tac Toe ![Screenshot](assets/images/favicon.jpg)
+# Tic Tac Toe ![Screenshot of custom made favicon](assets/images/favicon.jpg)
 
 A simple game to be enjoyed with a friend.
 
@@ -26,14 +26,18 @@ A simple game to be enjoyed with a friend.
     6.2 Manual testing<br/>
 7. Issues & Bugs<br/>
     7.1 Resolved issues<br/>
-    7.2 Validator testing<br/>
+    7.2 Unresolved issues<br/>
+    7.3 Possible future developments<br/>
+    7.4 Validator testing<br/>
 8. Deployment<br/>
     8.1 Github deployment<br/>
     8.2 Link<br/>
-9. Credits<br/>
-    9.1 Credits, references and thanks<br/>
-
-<br/><br/>
+9. 404 page<br/>
+    9.1 Page layout<br/>
+    9.2 Interactive parts<br/>
+    9.3 Non-interactive parts<br/>
+10. Credits<br/>
+    10.1 Credits, references and thanks<br/>
 
 ---------------
 
@@ -63,8 +67,6 @@ Tic Tac Toe is a turn-based game where players take it in turns to lay their gam
 
 ![Screenshot of a drawn playing grid](assets/images/pagelayout4.jpg)
 
-<br/><br/>
-
 ---------------
 
 ## 2. Planning
@@ -80,8 +82,6 @@ The aim of the game was to show how basic functions can be used to create a rela
 - JavaScript
 
 The users only needs to click the mouse to play. There are no redirects, links or page refreshes in the game.
-
-<br/><br/>
 
 ---------------
 
@@ -103,7 +103,7 @@ and that has a button that links back to the game page.
 
 *404 page*
 
-# INSERT 404 PIC
+![Screenshot of 404.html page](assets/images/fourzerofour-html.jpg)
 
 #### 3.3 Icons
 
@@ -114,13 +114,11 @@ the second favicon was created with the [Favicon creator](https://www.favicon.cc
 
 |First idea|Second idea|
 |--- |--- |
-|![Three t's, two in uppercare and the middle in lower case](assets/images/notused-TTT-favicon.png)|![Three t's, one larger in the middle and two smaller either side](assets/images/favicon.jpg)|
+|![Screenshot of logo withhree t's, two in uppercare and the middle in lower case](assets/images/notused-TTT-favicon.png)|![Screenshot of three t's, one larger in the middle and two smaller either side](assets/images/favicon.jpg)|
 
 I thought they were both ok but the created one seemed more unique:
 
-![Three t's, one larger in the middle and two smaller either side](assets/images/favicon.jpg)
-
-<br/><br/>
+![Screenshot of logo with three t's, one larger in the middle and two smaller either side](assets/images/favicon.jpg)
 
 ---------------
 
@@ -130,32 +128,30 @@ I thought they were both ok but the created one seemed more unique:
 
 In the middle of the page is the playing grid. Is is a 3x3 grid of squares that can be clicked on during the duration of the game. Player 1 will click to enter X's and Player 2 will click to enter O's.
 
-![Picture of a blank 3x3 grid](assets/images/pagelayout2.jpg)
+![Screenshot of a blank 3x3 grid](assets/images/pagelayout2.jpg)
 
 At the bottom is the Play Again button which will restart the game, clearing the grid of previous game information.
 This is the colour of the button normally:
 
-![Play Again button normally](assets/images/pagelayout4.jpg)
+![Screenshot of play Again button normally](assets/images/pagelayout4.jpg)
 
 This is the colour of the Play Again button once it is hovered over to be clicked:
 
-![Play Again button hovered over](assets/images/pagelayout4.jpg)
+![Screenshot of play Again button hovered over](assets/images/pagelayout4.jpg)
 
 #### 4.2 Non-interactive parts
 
 There is a heading box at the top which displays the name of the game and that there are two players who can play.
 
-![Heading box that shows the name of the game and the two players, x and o](assets/images/pagelayout1.jpg)
+![Screenshot of heading box that shows the name of the game and the two players, x and o](assets/images/pagelayout1.jpg)
 
 There is a text information underneath the playing grid, I have called it the status bar. It shows who's current turn it is and also if the match has been won or drawn.
 
-![Status bar example](assets/images/pagelayout3.jpg)
+![Screenshot of status bar example](assets/images/pagelayout3.jpg)
 
 And finally the footer which includes the author of the website.
 
 ![Footer copyright](assets/images/pagelayout5.jpg)
-
-<br/><br/>
 
 -----
 
@@ -217,8 +213,6 @@ This function is called on the click of the Play Again button
 
 From console:
 python3 -m http.server
-
-<br/><br/>
 
 -----
 
@@ -292,8 +286,6 @@ The website main page was run through the **[Multi Device Website Mockup Generat
  	</tr>
 </table>
 
-<br/><br/>
-
 -----
 
 ## 7. Issues & Bugs
@@ -309,7 +301,21 @@ There were a few bugs which have now been remedied:
 - Layout of game grid was not aligned correctly on the iPad on the MultiDevice picture but this has been correct by giving the top box a positioning of relative and adjusting the top margin values slightly.
 - Blanks arrays have been replace with an array.fill function to list the empty tiles in the grid (blanks = Array(9).fill("");)
 
-#### 7.2 Validator testing
+#### 7.2 Unresolved issues
+
+There is an issue which could be changed:
+- The ids of the game grid squares are numbers. This is not normal practice and should be avoided. In this instance with the game, the id class number is checked against the onTileClick function. A more advanced formula to separate the numeric from the alphanumeric would lead to a better practice.
+
+#### 7.3 Possible future developments
+
+Here are a few changes that could be made to enjoy a better experience playing the game:
+- A computer user could be generated to provide a challenger to solo players
+- Scores could be kept for repeated playing
+- A front page could provide a better practice for the website so that the user doesn't go straight into the gaem page
+- Avatars and usernames could be added to provide a more personable experience
+- Adding colour to squares to match the players colour code
+
+#### 7.4 Validator testing
 
 HTML - W3C validator
 
@@ -322,8 +328,6 @@ CSS - official (jigsaw) validator
 I have run this page through dev tools Lighthouse function:
 
 ![screenshot of Dev Tools Lighthouse](assets/images/lighthouse.jpg)
-
-<br/><br/>
 
 -----
 
@@ -343,16 +347,39 @@ The website was deployed using the hosting platform Github. Here are the steps:
 The website has been deployed through gitHub and can be found in the following link:
 https://welshdan.github.io/TicTacToe/
 
-<br/><br/>
+-----
+
+## 9. 404 page
+
+#### 9.1 Page layout
+
+If the user is typing in the website and types an incorrect address - see picture below for an example - then the 404 page is activated using the file called .htaccess.
+
+![Screenshot of the htaccess page](assets/images/htaccess.jpg)
+
+#### 9.2 Interactive parts
+
+In the middle of the page is a 1x3 grid of squares that spells out "404" and each square can be clicked on and the link returns the player to the game page which is index.html. 
+
+![Screenshot of the 404html page](assets/images/fourzerofour-error.jpg)
+
+#### 9.3 Non-interactive parts
+
+Underneath the grid is some rows of text that explain to the user that they can click one of the grid squares above to go back
+to the game
+
+![Screenshot of the 404html text](assets/images/fourzerofourstatus.jpg)
 
 -----
 
-## 9. Credits
+## 10. Credits
 
-#### 9.1 Credits, references and thanks
+#### 10.1 Credits, references and thanks
 
 Tips and help:
 
+- Code Institute for the coursework, instructions and tutor manuals
+- Slack and their users
 - W3.org - centering of start box / color coding<br>
 - JavaScript Master - startGame functions and layout help (https://www.youtube.com/watch?v=Slj9rPBJTcY&t=1214s)<br>
 - Emer Heffernan, personal tutoring and help<br>
