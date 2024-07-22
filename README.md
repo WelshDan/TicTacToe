@@ -137,7 +137,7 @@ This is the colour of the button normally:
 
 This is the colour of the Play Again button once it is hovered over to be clicked:
 
-![Screenshot of play Again button hovered over](assets/images/pagelayout4.jpg)
+![Screenshot of play Again button hovered over](assets/images/play-again-hover.jpg)
 
 #### 4.2 Non-interactive parts
 
