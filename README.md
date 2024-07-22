@@ -358,11 +358,13 @@ If the user is typing in the website and types an incorrect address - see pictur
 
 ![Screenshot of the htaccess page](assets/images/htaccess.jpg)
 
+![Screenshot of incorrectly typed link](assets/images/fourzerofour-error.jpg)
+
 #### 9.2 Interactive parts
 
 In the middle of the page is a 1x3 grid of squares that spells out "404" and each square can be clicked on and the link returns the player to the game page which is index.html. 
 
-![Screenshot of the 404html page](assets/images/fourzerofour-error.jpg)
+![Screenshot of the 404html page](assets/images/fourzerofour-html.jpg)
 
 #### 9.3 Non-interactive parts
 

@@ -139,7 +139,6 @@ body {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(3, auto);
-    text-decoration: none;
 }
 
 .error-status {
